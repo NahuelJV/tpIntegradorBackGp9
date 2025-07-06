@@ -13,9 +13,18 @@ const consultarProductos = async () =>{
 
 //Insertar registro
 //Ver bien columas
-const insertarProducto = async() => {
-    let cadSql = "insert into producto (nombre,precio,img,categeoria,activo) value (?,?,?,?,?)";
+const insertarProducto = async(codigo,nombre,precio,img,categorias,activo) => {
+    let cadSql = "insert into producto (codigo,nombre,precio,img,categoria,activo) value (?,?,?,?,?,?)";
 
-    return await conn.query(cadSql,[nombre,precio,img,categeoria,activo]);
+    return await conn.query(cadSql,[codigo,nombre,precio,img,categorias,activo]);
 }
 
+const actualizarProducto = async(nombre,precio,img,categorias,activo,codigo) =>{
+    let cadSql = "update producto set nombre = ?,precio = ?,img =? ,categoria = ? ,activo = ? where codigo = ?";
+    return await conn.query(cadSql,[nombre,precio,img,categorias,activo,codigo]);
+}
+
+export default{
+    insertarProducto,
+    actualizarProducto
+}
