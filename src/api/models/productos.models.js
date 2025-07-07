@@ -26,5 +26,6 @@ const actualizarProducto = async(nombre,precio,img,categorias,activo,codigo) =>{
 
 export default{
     insertarProducto,
+    consultarProductos,
     actualizarProducto
 }

@@ -5,26 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script defer src="../public/js/modificar.js"></script>
+    <link rel="stylesheet" href="../public/css/style.css">
 </head>
 <body>
+    <header class="header">
+        <a href="#">
+            <h3 class="logo">Administrador</h3>
+        </a>
+
+        <nav>
+            <a class="link" href="">Dashboard</a>
+            <a class="link" href="crearProducto.html">Crear producto</a>
+            <a class="link" href="">Buscar Producto</a>
+            <a class="link-referenciado" href="carrito.html">Modificar Producto</a>
+            <a class="link" href="carrito.html">Eliminar Producto</a>
+        </nav>
+
+    </header>
     <section>
         <div class="contenedor-producto">
             <h2>Consultar procuto</h2>
-            <form id="formulario-baja">
+            <form id="formulario-baja" class="form-consulta">
                 <label for="idProd">Id producto</label>
                 <input type="number" name="idProd" id="idProd" required>
 
-                <button type="submit">Consultar Producto</button>
+                <button type="submit" class="boton-consultar">Consultar Producto</button>
             </form>
-        </div>
+       
 
-        <form id="formulario-editar-producto" class="form-editar-producto">
+            <form id="formulario-editar-producto" class="form-editar-producto">
 
-        </form>
-            <ul id="lista-id">
-                <!--lo cargamos en js-->
-            </ul>
-        </div>
+            </form>
+        </div>    
     </section>
+
+    
 </body>
+
+
 </html>

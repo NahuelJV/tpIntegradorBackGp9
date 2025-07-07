@@ -17,7 +17,7 @@ formEliminarProducto.addEventListener("submit",consultarProducto);
 
 async function consultarProducto(events) {
       events.preventDefault();
-       listaId.innerHTML=`<p>cargarndo datoa</p>`; 
+       //slistaId.innerHTML=`<p>cargarndo datoa</p>`; 
     try {
          let datosFormulario= new FormData(events.target);
         let dato=Object.fromEntries(datosFormulario.entries());
@@ -85,7 +85,12 @@ async function consultarIdProducto(idProducto) {
 
 function mostrarProducto(producto){
     const formEditar = document.getElementById("formulario-editar-producto");
-    formEditar.innerHTML = `<div class="form-campos">
+    formEditar.innerHTML = `
+<div class="card-editar">
+  <div class="card-editar-imagen">
+    <img src="${producto.img}" alt="${producto.nombre}">
+  </div>
+  <div class="card-editar-datos">
     <label>
       Código:
       <input type="text" name="codigo" value="${producto.codigo}" readonly>
@@ -106,18 +111,17 @@ function mostrarProducto(producto){
       Categoría:
       <input type="text" name="categoria" value="${producto.categoria}" disabled>
     </label>
-    <label>
-      Activo:
+    <label class="checkbox-label">
       <input type="checkbox" name="activo" ${producto.activo ? 'checked' : ''} disabled>
+      Activo
     </label>
-    <img src="${producto.img}" alt="${producto.nombre}" class="img-listados" style="max-width:200px;margin-top:10px;">
-    </div>
-    <div class="form-botones">
-        <button type="button" id="boton-editar">Editar producto</button>
-        <button type="button" id="boton-enviar">Actualizaro</button>
-       
-    </div>
-  `;
+  </div>
+  <div class="card-editar-botones">
+    <button type="button" id="boton-editar" class="boton-editar">Editar Producto</button>
+    <button type="button" id="boton-enviar" class="boton-actualizar">Actualizar</button>
+  </div>
+</div>
+`;
 
     const botonEditar = document.getElementById("boton-editar");
     botonEditar.addEventListener("click", habilitarCampos);

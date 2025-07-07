@@ -6,12 +6,18 @@ import conn from "./src/api/database/db.js";
 import myslqService from "./src/api/models/productos.models.js";
 
 
+
+//Middlewares : -> 
 const app = express();
 const port = environments.port;
 
 app.use(cors());
 app.use(express.json());
 
+app.use((req,res) =>{
+
+}
+)
 app.listen(port,()=>{
     console.log('servidor app en puerto: ' + port);
 });

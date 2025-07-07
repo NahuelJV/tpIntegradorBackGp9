@@ -1,0 +1,253 @@
+/*estios para cargar producto*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(245, 245, 245);
+    color: rgb(0, 0, 0);
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(93, 109, 126);
+    padding: 10px 20px;
+    color: white;
+    flex-wrap: wrap;
+    border-bottom: 2px solid rgb(19, 19, 19);
+}
+
+header>a {
+    text-decoration: none;
+    color: white;
+}
+
+.link {
+    background-color: rgb(93, 109, 126);
+    color: rgb(19, 19, 19);
+    font-weight: bolder;
+    padding: 15px 20px;
+    font-size: 12px;
+}
+.link-referenciado {
+    background-color: rgb(19, 19, 19);
+    color: rgb(214, 219, 223);
+    font-weight: bolder;
+    padding: 15px 20px;
+    font-size: 12px;
+}
+
+footer {
+    background-color: rgb(93, 109, 126);
+    color: rgb(214, 219, 223);
+    text-align: center;
+    padding: 5px 0;
+}
+
+
+footer .seccion-alumnos {
+    margin: 0;
+    padding: 10px 0;
+}
+
+footer .seccion-alumnos  h1{
+   font-size: 1.5rem;
+   margin: 5px ;
+}
+
+footer .seccion-alumnos  h2{
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+#integrantes {
+    font-size: 1rem;
+    padding: 10px 0;
+}
+
+.cargar-producto{
+    max-width: 400px;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    border : 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    
+}
+
+.formulario-alta-header{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.formulario-alta-header h3{
+    margin: 0;
+}
+
+.formulario-alta{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+
+.formulario-alta label{
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+.formulario-alta input[type="text"],
+.formulario-alta input[type="number"] {
+    width: 100%;
+    padding: 0.4rem;
+    border-radius: 4px;
+    
+}
+
+/*ESTILOS DEL FORMULARIO EDITAR PRODUCTO*/
+
+
+/*form1*/
+.contenedor-producto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.form-consulta{
+    max-width: 300px;
+    margin: 1rem auto;
+    padding: 1rem;
+    border : 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+.form-consulta label{
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.form-consulta  input[type="number"]{
+    padding: 0.4rem;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+.boton-consultar{
+    background-color: #2196f3;
+    color:  white;
+    border :none;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+}
+
+.boton-consultar hover{
+    background-color: #1976d2;
+}
+
+.form-alta-campo input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-top: 0.4rem;
+}
+
+.form-alta-botones {
+    display: flex;
+    gap:0.5rem;
+    justify-content: space-between;
+}
+
+.boton-confirmar {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.boton-confirmar:hover {
+    background-color: #388e3c;
+}
+
+.boton-cancelar {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.boton-cancelar:hover {
+  background-color: #d32f2f;
+}
+/*form2*/
+.form-editar-producto{
+    max-width: 300px;
+    margin: 1rem auto;
+    padding: 1rem;
+    border : 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: row;
+    gap:1rem;
+}
+.card-editar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    max-width: 300px;
+    background-color: #f9f9f9;
+}
+
+.card-editar-imagen img{
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.card-editar-datos{
+    width: 100%;
+    margin-top: 1rem;
+
+}
+
+.card-editar-datos label{
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.card-editar-datos input[type="text"],
+.card-editar-datos input[type="number"] {
+
+    width: 100%;
+    padding: 0.4rem;
+    border-radius: 4px;
+
+}
+
+.checkbox-label{
+    display: flex;
+    align-items: center;
+    gap:0.5rem;
+}
+
+
+
+

@@ -5,41 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>carga de producto</title>
     <script defer src="../public/js/main.js"></script>
+    <link rel="stylesheet" href="../public/css/style.css">
 </head>
 <body>
+    <!-- Encabezado -->
+    <header class="header">
+        <a href="#">
+            <h3 class="logo">Administrador</h3>
+        </a>
+        <nav>
+            <a class="link" href="">Dashboard</a>
+            <a class="link-referenciado" href="crearProducto.html">Crear producto</a>
+            <a class="link" href="">Buscar Producto</a>
+            <a class="link" href="modificarProducto.html">Modificar Producto</a>
+            <a class="link" href="">Eliminar Producto</a>
+        </nav>
+
+    </header>
     <section class="cargar-producto">
-        <h3>Alta de producto</h3>
-        <span>Completa los datos los siguientes datos :</span>
-        <form class="formulario-alta" id="formulario-producto">
-            <label for="">Codigo:
-                <input type="text" name="codigo">
-            </label>
-            <label for="">nombre:
-                <input type="text" name="nombre">
-            </label>
-            <label for="">Precio:
-                <input type="number" name="precio">
-            </label>
+  <div class="formulario-alta-header">
+    <h3>Alta de producto</h3>
+    <span>Completa los siguientes datos:</span>
+  </div>
 
-            <label for="">Imagen:
-                <input type="text" name="img">
-            </label>
+  <form class="formulario-alta" id="formulario-producto">
+    <div class="form-alta-campo">
+      <label for="codigo">Código:</label>
+      <input type="text" name="codigo" id="codigo" required>
+    </div>
 
-            <label for="">Categoria:
-                <input type="text" name="categorias">
-            </label>
-            <!--Cambiar por chekbox-->
-            <label for="">Activo:
-                <input type="text" name="activo">
-            </label>
+    <div class="form-alta-campo">
+      <label for="nombre">Nombre:</label>
+      <input type="text" name="nombre" id="nombre" required>
+    </div>
 
-            <button type="submit">Confirmar</button>
-            <button type="button">Cancelar</button>
-        </div>
+    <div class="form-alta-campo">
+      <label for="precio">Precio:</label>
+      <input type="number" name="precio" id="precio" required>
+    </div>
 
-        <div class="producto" id="producto-alta">
+    <div class="form-alta-campo">
+      <label for="img">Imagen URL:</label>
+      <input type="text" name="img" id="img">
+    </div>
 
-        </div>
-    </section>
+    <div class="form-alta-campo">
+      <label for="categorias">Categoría:</label>
+      <input type="text" name="categorias" id="categorias">
+    </div>
+
+    <div class="form-alta-campo">
+      <label for="activo">Activo:</label>
+      <input type="checkbox" name="activo" id="activo">
+    </div>
+
+    <div class="form-alta-botones">
+      <button type="submit" class="boton-confirmar">Confirmar</button>
+      <button type="button" class="boton-cancelar">Cancelar</button>
+    </div>
+  </form>
+
+  <div class="producto" id="producto-alta"></div>
+</section>
+
+
 </body>
 </html>
